@@ -1,0 +1,66 @@
+@use "sass:math";
+
+@import url("https://fonts.googleapis.com/css?family=Work+Sans:regular,500,600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Public+Sans:regular&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:regular,500,600&display=swap");
+// basa
+@import "base/reset.scss";
+@import "base/mixins.scss";
+@import "base/fonts.scss";
+@import "base/variables";
+
+// componets
+@import "components/buttons";
+@import "components/header";
+@import "components/title";
+@import "components/social";
+@import "components/hero-top";
+@import "components/hero-bottom";
+@import "components/work-process";
+@import "components/portfolio";
+@import "components/cards";
+@import "components/work-together";
+@import "components/blog";
+@import "components/services";
+@import "components/clients";
+@import "components/testimonial";
+@import "components/contact";
+@import "components/form";
+@import "components/footer";
+
+
+
+body {
+	color:$Gray-600;
+	font-family: "Work Sans";
+	@include adaptiveValue("font-size", 18,16);
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.3; /* 133.333% */
+}
+.wrapper {
+	min-height: 100%;
+	overflow: clip; /* clip */
+
+	display: flex;
+	flex-direction: column;
+
+	position: relative;
+	z-index: 2;
+}
+.wrapper > main {
+	flex-grow: 1;
+}
+
+/* --------------------- */
+
+[class*="__container"] {
+	max-width: toRem(1350);
+	padding-inline: toRem(15);
+	margin: 0 auto;
+}
+[class*="--margin"] {
+	margin-bottom: 20px;
+}
+
+

@@ -1,0 +1,109 @@
+.work-process {
+    padding: toRem(243) toRem(0) toRem(140) toRem(0);
+    background-color: $Gray-50;
+    @media (max-width: toEm(1024)){
+        padding: toRem(180) toRem(0) toRem(120) toRem(0);
+   }
+    
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: toRem(143);
+        row-gap: toRem(50);
+        @media (max-width: toEm(1024)){
+             column-gap: toRem(60); 
+        }
+        @media (max-width: toEm(950)){
+             flex-direction: column; 
+        }
+    }
+
+    &__descr {
+        flex: 0 1 toRem(531);
+        @media (max-width: toEm(950)){
+            flex-basis: toRem(300); 
+       }
+    }
+    
+
+    &__cards {
+        flex: 0 1 toRem(648);
+        @media (max-width: toEm(950)){
+            flex:0 1 toRem(430); 
+        }
+    }
+
+    &__cards-items {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: toRem(24);
+        @media (max-width: toEm(1024)){
+             gap: toRem(20); 
+        }
+    }
+
+    &__cards-item {
+        flex: 0 1 calc(50% - toRem(16));
+        padding: toRem(32);
+        background-color: $white;
+        border-radius: toRem(12);
+        transition: box-shadow 0.3s;
+        &:nth-child(2n + 2) {
+            transform: translateY(toRem(24));
+        }
+        @media (any-hover: hover){
+            &:hover{
+                box-shadow: 0px toRem(12) toRem(64) 0px rgba(28, 25, 25, 0.12);
+                .work-process__cards-img {
+                    background-color: $primary-500;
+                    img {
+                        filter: brightness(0) invert(1);;
+                    }
+                }
+            }
+        }
+        @media (max-width: toEm(1024)){
+            padding: toRem(25);
+        }
+        @media (max-width: toEm(1024)){
+            &:nth-child(2n + 2) {
+                transform: translateY(toRem(0));
+            }
+        }
+        @media (max-width: toEm(500)){
+            flex: 0 0 calc(100%);
+        }
+    }
+
+    &__cards-img {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        padding: toRem(20);
+        background: rgba(237, 216, 255, 0.50);
+        border-radius: 6px;
+        overflow: hidden;
+        transition: background-color 0.3s;
+        &:not(:last-child) {margin-bottom: toRem(32);}
+        img {
+            width: toRem(32);
+            height: toRem(32);
+            transition: filter 0.3s;
+        }
+        @media (max-width: toEm(1024)){
+            &:not(:last-child) {margin-bottom: toRem(25);}
+        }
+        
+       
+    }
+}
+.title-block {
+
+    &__title {
+    }
+
+    &__description {
+    }
+}

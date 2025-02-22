@@ -1,0 +1,79 @@
+.blog {
+    position: relative;
+    padding: toRem(100) toRem(0) toRem(100) toRem(0);
+    @media (max-width: toEm(1024)){
+        padding: toRem(70) toRem(0) toRem(70) toRem(0);
+    }
+    @media (max-width: toEm(768)){
+        padding: toRem(50) toRem(0) toRem(50) toRem(0);
+    }
+    &__container {
+        &::before {
+            content: '';
+            position: absolute;
+            width: 871.213px;
+            height: 871.213px;
+            top: 0;
+            left: 0;
+            border-radius: 871.213px;
+            background: rgba(218, 77, 241, 0.40);
+            filter: blur(250px);
+            transform: translate(-90%, -70%) rotate(-130.444deg);
+        }
+    }
+
+    &__title {
+        max-width: toRem(540);
+        text-align: center;
+        margin: 0 auto;
+        font-family: "Public Sans";
+        &:not(:last-child) {margin-bottom: toRem(70);}
+        @media (max-width: toEm(1024)){
+             &:not(:last-child) {margin-bottom: toRem(50);} 
+        }
+        @media (max-width: toEm(768)){
+            &:not(:last-child) {margin-bottom: toRem(30);} 
+       }
+    }
+
+    &__card {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(toRem(300), 1fr));
+        grid-template-rows: repeat(2 minmax(toRem(300), toRem(476)));
+        column-gap: toRem(24);
+        &:not(:last-child) {margin-bottom: toRem(24);}
+        overflow-y: auto;
+        padding-inline: toRem(70);
+        margin-inline: toRem(-70);
+        padding-block-start: toRem(70);
+        margin-block-start: toRem(-70);
+        padding-block-end: 4rem;
+        margin-block-end: -2.5rem;
+
+    }
+
+    &__dots {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: toRem(12);
+
+    }
+
+    &__dot {
+        width: toRem(8);
+        height: toRem(8);
+        border-radius: toRem(3.5);
+        background-color: $Gray-200;
+        transition: width 0.3s ease, height 0.3s ease, border-radius 0.3s ease, background-color 0.3s ease;
+        overflow: hidden;
+        @media (any-hover: hover){
+            &:hover{
+                width: toRem(30);
+                height: toRem(7);
+                background-color: #210C33;
+            }
+        }
+    }
+}
+

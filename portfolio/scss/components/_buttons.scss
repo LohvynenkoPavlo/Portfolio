@@ -1,0 +1,57 @@
+@import "../base/mixins"; // Подключаем миксины
+@import "../base/variables"; // Подключаем переменные
+
+.button--primary {
+  @include button($primary-500, #FFF, $primary-600, #FFF);
+  @media (max-width: toEm(768)){
+    margin: 0 auto;
+    width: 65%; 
+  }
+  &--after {
+    &::after {
+      content: '';
+      width: toRem(12);
+      height: toRem(12);
+      background: url(../icons/button/arrow-white.svg)center center/cover no-repeat;
+      margin-left: toRem(12);
+    }
+  }
+  &-form {
+    &::after {
+      content: '';
+      width: toRem(20);
+      height: toRem(20);
+      background: url(../icons/button/form-arrow.svg)center center/cover no-repeat;
+      margin-left: toRem(12);
+    }
+  }
+}
+
+.button--secondary {
+  @include button(#FFF, $primary-500, $white, $primary-600, 1px solid $primary-500);
+  &--before {
+    &::before {
+      content: '';
+      width: toRem(24);
+      height: toRem(24);
+      background: url(../icons/button/download.svg)center center/cover no-repeat;
+    }
+  }
+  &--after {
+    &::after {
+      content: '';
+      width: toRem(12);
+      height: toRem(12);
+      background: url(../icons/button/arrow.svg)center center/cover no-repeat;
+    }
+  }
+}
+
+
+// <a href="#" class="button button--primary">
+// <span class="button__text">Button</span>
+// </a>
+
+// <a href="#" class="button button--secondary button--icon">
+// <span class="button__text">Button</span>
+// </a>

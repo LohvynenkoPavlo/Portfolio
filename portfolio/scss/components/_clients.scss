@@ -1,0 +1,171 @@
+.clients {
+    position: relative;
+    // background-color: #FFFBF6;
+    padding: toRem(100) toRem(0) toRem(100) toRem(0);
+    @media (max-width: toEm(1024)){
+        padding: toRem(70) toRem(0) toRem(70) toRem(0);
+    }
+    @media (max-width: toEm(768)){
+        padding: toRem(50) toRem(0) toRem(50) toRem(0);
+    }
+    &__container {
+    }
+
+    &__title {
+        text-align: center;
+        margin: 0 auto;
+        max-width: toRem(577);
+        &:not(:last-child) {margin-bottom: toRem(24);}
+    }
+
+    &__icons {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(toRem(180), toRem(200)));
+        grid-template-rows: minmax(toRem(180), toRem(200));
+        grid-auto-rows: minmax(toRem(180), toRem(200));
+        column-gap: toRem(24);
+        row-gap: toRem(50);
+        @media (max-width: toEm(1220)){
+            grid-template-columns: repeat(3, minmax(toRem(180), toRem(200))); 
+            justify-content: space-around;
+        }
+        @media (max-width: toEm(768)){
+            grid-template-columns: repeat(2, minmax(toRem(180), toRem(200)));
+            grid-template-rows:  toRem(150);
+            grid-auto-rows:  toRem(150); 
+        }
+        @media (max-width: toEm(425)){
+            grid-template-columns: repeat(1, minmax(toRem(180), toRem(200)));
+            grid-template-rows: repeat(6, toRem(80)) ;
+            grid-auto-rows:  toRem(80); 
+        }
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        path {
+            transition: fill 0.3s ease;
+        }
+        @media (any-hover: hover) {
+            &:hover .clients__icon-link-g path{
+                fill: #4285F4; 
+            }
+    
+            &:hover .clients__icon-link-o-1 path {
+                fill: #EA4335; 
+            }
+    
+            &:hover .clients__icon-link-o-2 path {
+                fill: #FBBC05; 
+            }
+    
+            &:hover .clients__icon-link-g-littel path {
+                fill: #4285F4; 
+            }
+    
+            &:hover .clients__icon-link-l path {
+                fill: #34A853; 
+            }
+    
+            &:hover .clients__icon-link-e path{
+                fill: #EA4335; 
+            }
+            &:hover .clients__icon-link-wrapper {
+                background-color: #069;
+            }
+            &:hover .clients__icon-link-linked path,
+            &:hover .clients__icon-link-amazon path,
+            &:hover .clients__icon-link-dribbble path,
+            &:hover .clients__icon-link-medium path,
+            &:hover .clients__icon-link-spotify path {
+                fill: black;
+            }
+            &:hover .clients__icon-link-arrow path {
+                fill: #FF9900;
+            }
+        }
+        @media (max-width: toEm(768)){
+            .clients__icon-link-g path {
+                fill: #4285F4;
+            }
+            
+            .clients__icon-link-o-1 path {
+                fill: #EA4335;
+            }
+            
+            .clients__icon-link-o-2 path {
+                fill: #FBBC05;
+            }
+            
+            .clients__icon-link-g-littel path {
+                fill: #4285F4;
+            }
+            
+            .clients__icon-link-l path {
+                fill: #34A853;
+            }
+            
+            .clients__icon-link-e path {
+                fill: #EA4335;
+            }
+            
+            .clients__icon-link-wrapper {
+                background-color: #069;
+            }
+            
+            .clients__icon-link-linked path,
+            .clients__icon-link-amazon path,
+            .clients__icon-link-dribbble path,
+            .clients__icon-link-medium path,
+            .clients__icon-link-spotify path {
+                fill: black;
+            }
+            
+            .clients__icon-link-arrow path {
+                fill: #FF9900;
+            }
+             
+        }
+    }
+
+    &__icon-link {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        gap: toRem(2);
+        position: relative;
+    
+        &-g-littel {
+            position: relative;
+            transform: translateY(30%);
+        }
+        &-dribbble {
+            transform: translateY(10%);
+            filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.2));
+        }
+        &-wrapper {
+            display: flex;
+            width: toRem(37);
+            height: toRem(37);
+            justify-content: center;
+            align-items: center;
+            background-color: $Gray-300;
+            transition: background-color 0.3s;
+        }
+        &--centr {
+            align-items: center;
+            gap: toRem(5);
+        }
+        &-arrow {
+            position: absolute;
+            transform: translate(-17%, 100%);
+        }
+        &-spotify  {
+            filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.2));
+        }
+    }
+}
+

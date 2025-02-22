@@ -1,0 +1,17 @@
+.work-together {
+    background-color: $Gray-900;
+    padding-top: toRem(100);
+    padding-bottom: toRem(100);
+    text-align: center;
+    [class*="__container"] {
+        max-width: toRem(651);
+    }
+    @media (max-width: toEm(1024)){
+        padding-top: toRem(70);
+        padding-bottom: toRem(70);
+    }
+    @media (max-width: toEm(768)){
+        padding-top: toRem(50);
+        padding-bottom: toRem(50);
+    }
+}

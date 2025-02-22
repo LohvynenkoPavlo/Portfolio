@@ -1,0 +1,54 @@
+.portfolio {
+    padding: toRem(100) toRem(0) toRem(100) toRem(0);
+    @media (max-width: toEm(1024)){
+        padding: toRem(70) toRem(0) toRem(70) toRem(0); 
+    }
+    @media (max-width: toEm(500)){
+        padding: toRem(50) toRem(0) toRem(50) toRem(0);  
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__title {
+        max-width: toRem(577);
+        margin: 0 auto;
+        text-align: center;
+        &:not(:last-child) {margin-bottom: toRem(70);}
+        h2 {
+            margin: 0 auto;
+        }
+        @media (max-width: toEm(1024)){
+            &:not(:last-child) {margin-bottom: toRem(50);} 
+        }
+        @media (max-width: toEm(768)){
+            &:not(:last-child) {margin-bottom: toRem(30);} 
+        }
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(toRem(200), 1fr));
+        grid-template-rows: repeat(2 minmax(toRem(300), toRem(476)));
+        gap: toRem(24);
+        &:not(:last-child) {margin-bottom: toRem(50);}
+        @media (max-width: toEm(1024)){
+             gap: 18px; 
+        }
+        @media (max-width: toEm(768)){
+            grid-template-columns: repeat(2, minmax(toRem(200), 1fr));
+            &:not(:last-child) {margin-bottom: toRem(30);}  
+        }
+        @media (max-width: toEm(500)){
+            grid-template-columns: repeat(1, minmax(toRem(200), toRem(450)));  
+        }
+    }
+
+    &__button {
+    }
+}
+

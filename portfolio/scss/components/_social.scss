@@ -1,0 +1,73 @@
+
+.social {
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    background-color: $white;
+    border-radius: toRem(4);
+    box-shadow: 0 toRem(12) toRem(64) 0 rgba(28, 25, 25, 0.12);
+    &--gap12 {
+        column-gap: toRem(12);
+        box-shadow:none;
+        @media (max-width: toEm(375)){
+            column-gap: toRem(0);
+       }
+    }
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: toRem(48);
+        height: toRem(48);
+        img {
+            width: toRem(18);
+            height: toRem(18);
+        }
+    }
+    &__item {
+        flex: 0 0 toRem(48);
+        border-radius: toRem(4);
+        transition: background-color 0.3s;
+        overflow: hidden;
+        &:hover {
+            background-color: $primary-500;
+            img {
+                filter: brightness(0) invert(1); // Меняем цвет на белый
+                transition: filter 0.3s ease;
+            }
+        }
+        
+    }
+}
+
+
+
+// <ul class="hero__about-icons social">
+// <li class="social__item">
+//     <a href="" class="social__link">
+//         <img src="icons/social/facebook.svg" alt="Facebook">
+//     </a>
+// </li>
+// <li class="social__item">
+//     <a href="" class="social__link">
+//         <img src="icons/social/dribbble.svg" alt="Facebook">	
+//     </a>
+// </li>
+// <li class="social__item">
+//     <a href="" class="social__link">
+//         <img src="icons/social/instagram.svg" alt="Facebook">	
+//     </a>
+// </li>
+// <li class="social__item">
+//     <a href="" class="social__link">
+//         <img src="icons/social/linkdin.svg" alt="Facebook">
+//     </a>
+// </li>
+// <li class="social__item">
+//     <a href="" class="social__link">
+//         <img src="icons/social/behance.svg" alt="Facebook">
+//     </a>
+// </li>
+// </ul>
+

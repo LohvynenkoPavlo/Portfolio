@@ -1,0 +1,100 @@
+.testimonial {
+    // background-color: #FFFBF6;
+    position: relative;
+    padding-bottom: toRem(100);
+    @media (max-width: toEm(1024)){
+         padding-bottom: toRem(70); 
+
+    }
+    @media (max-width: toEm(768)){
+         padding-bottom: toRem(50); 
+    }
+    text-align: center;
+    [class*="__container"] {
+        max-width: toRem(902);
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            transform: translate(50%, -50%);
+            width: 1481px;
+            height: 1482px;
+            flex-shrink: 0;
+            border-radius: 1482px;
+            background: linear-gradient(182deg, rgba(255, 234, 198, 0.20) -157.44%, rgba(255, 234, 198, 0.14) 216.94%, rgba(255, 234, 198, 0.13) 216.94%);
+            filter: blur(350px);
+            z-index: -1;
+        }
+    }
+    &__title {
+        color: #333;
+        font-size: 48px;
+        font-weight: 600;
+        line-height: 1.16; /* 116.667% */
+        &:not(:last-child) {margin-bottom: toRem(24);}
+        @media (max-width: toEm(768)){
+             &:not(:last-child) {margin-bottom: toRem(15);} 
+        }
+    }
+
+    &__subtitle {
+        max-width: toRem(577);
+        margin: 0 auto;
+        color: $Gray-400;
+        &:not(:last-child) {margin-bottom: toRem(70);}
+        @media (max-width: toEm(768)){
+            &:not(:last-child) {margin-bottom: toRem(30);} 
+       }
+    }
+
+    &__quote {
+        color: $Gray-800;
+        font-weight: 500;
+        &:not(:last-child) {margin-bottom: toRem(24);}
+        @media (max-width: toEm(768)){
+            &:not(:last-child) {margin-bottom: toRem(15);} 
+       }
+    }
+
+    &__author {
+        color: #000;
+        font-family: Poppins;
+        font-weight: 500;
+        line-height: 1.44; /* 144.444% */
+        &:not(:last-child) {margin-bottom: toRem(8);}
+    }
+
+    &__position {
+        color: #000;
+        font-family: Poppins;
+        @include adaptiveValue("font-size", 16, 14);
+        font-weight: 300;
+        line-height: 1.5; /* 150% */
+        &:not(:last-child) {margin-bottom: toRem(50);}
+        @media (max-width: toEm(768)){
+            &:not(:last-child) {margin-bottom: toRem(34);} 
+       }
+    }
+    &__dots {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: toRem(12);
+    }
+    &__dot {
+        width: toRem(8);
+        height: toRem(8);
+        border-radius: toRem(3.5);
+        background-color: $Gray-200;
+        transition: width 0.3s ease, height 0.3s ease, border-radius 0.3s ease, background-color 0.3s ease;
+        overflow: hidden;
+        @media (any-hover: hover){
+            &:hover{
+                width: toRem(30);
+                height: toRem(7);
+                background-color: #210C33;
+            }
+        }
+    }
+}

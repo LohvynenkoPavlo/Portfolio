@@ -1,0 +1,85 @@
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    &__field {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        
+        input,
+        textarea {
+            width: 100%;
+            padding: 0.5rem 0;
+            height: 2.375rem;
+            font-size: 1rem;
+            line-height: 1;
+            border: none;
+            border-bottom: 0.125rem solid #E6E8EB;
+            outline: none;
+            transition: border-color 0.3s ease-in-out;
+            background: transparent;
+        }
+
+        label {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            font-size: 1rem;
+            color: #aaa;
+            transition: all 0.3s ease-in-out;
+            pointer-events: none;
+        }
+
+        input:focus + label,
+        input:not(:placeholder-shown) + label,
+        textarea:focus + label,
+        textarea:not(:placeholder-shown) + label {
+            top: 0;
+            font-size: 0.75rem;
+            color: #A53DFF;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-bottom: 0.125rem solid #A53DFF;
+        }
+
+        textarea {
+            height: 3rem;
+            resize: none;
+            overflow-y: auto;
+        }
+    }
+
+    &__row {
+        display: flex;
+        gap: 0.625rem;
+
+        .contact-form__field {
+            flex: 1;
+        }
+    }
+    &__field{
+        &--mb50 {
+            &:not(:last-child) {margin-bottom: toRem(26);}
+        }
+    }
+}
+
+.input-error {
+    border: 2px solid red;
+}
+
+.form-errors {
+    color: red;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.form-errors li {
+    margin-bottom: 5px;
+}
+
